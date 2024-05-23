@@ -4,11 +4,11 @@ from distutils.dir_util import copy_tree
 from setuptools import find_packages, setup
 
 # globals
-package_name = 'rfsoc_qsfp_offload'
+package_name = 'rfsoc_sensing'
 board = os.environ['BOARD']
 repo_board_dir = f'boards/{board}/{package_name}'
 board_notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
-board_project_dir = os.path.join(board_notebooks_dir, 'rfsoc-offload')
+board_project_dir = os.path.join(board_notebooks_dir, 'rfsoc-sensing')
 
 data_files = ['network_layer.json']
 
@@ -65,18 +65,18 @@ copy_drivers()
 copy_notebooks()
 
 setup(
-        name="rfsoc_qsfp_offload",
-        version='0.0.3',
+        name="rfsoc_sensing",
+        version='0.0.1',
         install_requires=[
             'pynq>=2.7',
             ],
         url='https://github.com/',
         license='BSD 3-Clause License',
-        author='Josh Goldsmith',
-        author_email='joshua.goldsmith@strath.ac.uk',
+        author='Timothy Pelham',
+        author_email='t.g.pelham@bristol.ac.uk',
         packages=find_packages(),
         package_data={
             '': data_files,
             },
-        description="QSFP offload for RFSoC"
+        description="QSFP offload for RFSoC Sensing"
 )
