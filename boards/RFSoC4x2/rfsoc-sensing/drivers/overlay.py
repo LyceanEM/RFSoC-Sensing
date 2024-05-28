@@ -32,6 +32,7 @@ class Overlay (Overlay):
             this_dir = os.path.dirname(__file__)
             bitfile_name = os.path.join(this_dir, 'bitstream', 'rfsoc_offload.bit')
         else:
+            bitfile_name = os.path.join(this_dir, 'bitstream', bitfile_name)
             if not os.path.isfile(bitfile_name):
                 raise ValueError("Bitstream does not exist.")
 
