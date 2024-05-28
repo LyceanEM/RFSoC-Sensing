@@ -15,7 +15,7 @@ data_files = ['network_layer.json']
 # check whether board is supported
 def check_env():
     if not os.path.isdir(repo_board_dir):
-        raise ValueError("Board {} is not supported.".format(board))
+        raise ValueError("Board {} is not supported.".format(board),repo_board_dir)
     if not os.path.isdir(board_notebooks_dir):
         raise ValueError(
                 "Directory {} does not exist.".format(board_notebooks_dir))
