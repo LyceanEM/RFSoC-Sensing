@@ -4,11 +4,11 @@ from distutils.dir_util import copy_tree
 from setuptools import find_packages, setup
 
 # globals
-package_name = 'rfsoc-sensing'
+package_name = 'rfsoc_sensing'
 board = os.environ['BOARD']
 repo_board_dir = f'boards/{board}/{package_name}'
 board_notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
-board_project_dir = os.path.join(board_notebooks_dir, 'rfsoc-sensing')
+board_project_dir = os.path.join(board_notebooks_dir, 'rfsoc_sensing')
 
 data_files = ['network_layer.json']
 
@@ -65,7 +65,7 @@ copy_drivers()
 copy_notebooks()
 
 setup(
-        name="rfsoc-sensing",
+        name="rfsoc_sensing",
         version='0.0.1',
         install_requires=[
             'pynq>=2.7',
