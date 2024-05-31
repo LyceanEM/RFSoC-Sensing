@@ -1,4 +1,4 @@
-VIVADO_VERSION := 2021.1
+VIVADO_VERSION := 2023.2
 
 all: vivado_prj
 
@@ -15,8 +15,8 @@ build_ip: vivado_check
 	$(MAKE) all -C ./boards/ip_repo/xup_vitis_network_example/NetLayers
 
 vivado_prj: vivado_check build_ip
-	$(MAKE) all -C ./boards/RFSoC4x2/rfsoc_qsfp_offload/
+	$(MAKE) all -C ./boards/RFSoC4x2/rfsoc_sensing/
 
 clean:
 	$(MAKE) clean -C ./boards/ip_repo/xup_vitis_network_example/NetLayers
-	$(MAKE) clean -C ./boards/RFSoC4x2/rfsoc_qsfp_offload/
+	$(MAKE) clean -C ./boards/RFSoC4x2/rfsoc_sensing/
