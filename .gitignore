@@ -8,3 +8,5 @@ boards/RFSoC4x2/rfsoc_offload/rfsoc_offload/
 *.jou
 NA/
 .Xil/
+
+**/boards/RFSoC4x2/RFSoCSensing/rfsoc_offload
